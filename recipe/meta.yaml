@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.4.142" %}
+{% set version = "8.4.143" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: d815e4d41a057213a0ce53a87dc307b99e0c993c45116d6435bd2e6126b26f76
+  sha256: 56a35a522a377ee4175eba23b6db3d1cb6feca4d72abe9a6cebaaf209217d135
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
